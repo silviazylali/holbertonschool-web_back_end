@@ -12,3 +12,5 @@ function handleProfileSignup() {
             console.error('Error:', error);
         });
 }
+
+export default handleProfileSignup;
