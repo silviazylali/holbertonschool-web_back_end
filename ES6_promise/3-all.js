@@ -5,12 +5,11 @@ function handleProfileSignup() {
         .then((responses) => {
 
             console.log(
-                `${Response[0].firstName} ${Response[1].firstName} ${Response[1].lastName}`);
-            console.log(photoResponse.body);
+                `${Response[0].firstName} ${Response[1].firstName} ${Response[1].lastName}`
+            );
         })
-        .catch((error) => {
-            console.error('Error:', error);
-        });
+        .catch(() => console.log("Signup system offline"));
 }
+
 
 export default handleProfileSignup;
