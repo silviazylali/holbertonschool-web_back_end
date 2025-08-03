@@ -1,4 +1,3 @@
-/*eslint-disable*/
-export default function signUpUser(firstname, lastname) {
-    return Promise.resolve({firstname, lastname});
+export default function signUpUser(firstName, lastName) {
+    return Promise.resolve({ firstName, lastName });
 }
