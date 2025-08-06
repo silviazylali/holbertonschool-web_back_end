@@ -44,5 +44,13 @@ export default class HolbertonCourse {
             throw new Error('Length must be a number');
         }
     }
+
+    set students(students){
+        if (Array.isArray(students)){
+            this._students = students;
+        } else {
+            throw new Error('Students must be an array of strings');
+        }
+    }
     
 }
