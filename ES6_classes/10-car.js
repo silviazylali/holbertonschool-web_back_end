@@ -4,8 +4,10 @@ export default class Car {
     this._motor = motor;
     this._color = color;
   }
-
+  
   cloneCar() {
-    return Object.create(Object.getPrototypeOf(this), Object.getOmPropertyDescriptors(this));
+    return Object.create(
+      Object.getPrototypeOf(this),
+      Object.getOwnPropertyDescriptors(this));
   }
 }
