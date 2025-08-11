@@ -1,106 +1,57 @@
-// export default class HolbertonCourse {
-//     constructor(name, length, students) {
-
-//         if (typeof name === 'string'){
-//             this._name = name;
-//         } else {
-//             throw new Error('Name must be a string');
-//         }
-
-//         if (typeof length === 'number'){
-//             this._length = length;
-//         } else {
-//             throw new Error('Length must be a number');
-//         }
-
-//         if (Array.isArray(students)){
-//             this._students = students;
-//         } else {
-//             throw new Error('Students must be an array of strings');
-//         }
-//     }
-
-
-//     get name() {
-//         return this._name;
-//     }
-//     get length(){
-//         return this._length;
-//     }
-//     get students(){
-//         return this._students;
-//     }
-
-//     set name(name){
-//         if (typeof name === 'string'){
-//             this.name = name;
-//         } else {
-//             throw new Error('Name must be a string');
-//         }
-//     }
-
-//     set length(length){
-//         if (typeof length === 'number'){
-//             this.length = length;
-//         } else {
-//             throw new Error('Length must be a number');
-//         }
-//     }
-
-//     set students(students){
-//         if (Array.isArray(students)){
-//             this._students = students;
-//         } else {
-//             throw new Error('Students must be an array of strings');
-//         }
-//     }
-    
-// }
-
-
-// File: 2-hbtn_course.js
-
 export default class HolbertonCourse {
-    constructor(name, length, students) {
-      this.name = name;
-      this.length = length;
-      this.students = students;
+  constructor(name, length, students) {
+    if (typeof name === 'string') {
+      this._name = name;
+    } else {
+      throw new Error('Name must be a string');
     }
-  
-    // Getter and Setter for name
-    get name() {
-      return this._name;
+
+    if (typeof length === 'number') {
+      this._length = length;
+    } else {
+      throw new Error('Length must be a number');
     }
-  
-    set name(value) {
-      if (typeof value !== 'string') {
-        throw new TypeError('Name must be a string');
-      }
-      this._name = value;
-    }
-  
-    // Getter and Setter for length
-    get length() {
-      return this._length;
-    }
-  
-    set length(value) {
-      if (typeof value !== 'number') {
-        throw new TypeError('Length must be a number');
-      }
-      this._length = value;
-    }
-  
-    // Getter and Setter for students
-    get students() {
-      return this._students;
-    }
-  
-    set students(value) {
-      if (!Array.isArray(value) || !value.every(student => typeof student === 'string')) {
-        throw new TypeError('Students must be an array of strings');
-      }
-      this._students = value;
+
+    if (Array.isArray(students)) {
+      this._students = students;
+    } else {
+      throw new Error('Students must be an array of strings');
     }
   }
-  
+
+  get name() {
+    return this._name;
+  }
+
+  get length() {
+    return this._length;
+  }
+
+  get students() {
+    return this._students;
+  }
+
+  set name(name) {
+    if (typeof name === 'string') {
+      this._name = name;
+    } else {
+      throw new Error('Name must be a string');
+    }
+  }
+
+  set length(length) {
+    if (typeof length === 'number') {
+      this._length = length;
+    } else {
+      throw new Error('Length must be a number');
+    }
+  }
+
+  set students(students) {
+    if (Array.isArray(students)) {
+      this._students = students;
+    } else {
+      throw new Error('Students must be an array of strings');
+    }
+  }
+}
